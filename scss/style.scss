@@ -86,7 +86,7 @@ img {
   display: inline-block; //リンクを囲っている箱に対してtacを使うことができる
   padding: 10px 54px;
   transition: background-color 0.4s, color 0.4s;
-  
+
   &.-active {
     background: $primary-color;
     color: #fff;
@@ -99,7 +99,6 @@ img {
       }
     }
   }
-
 }
 /*=====================================================
 # main
@@ -131,7 +130,7 @@ main {
     background: $primary-color;
 
     .drawer-open & {
-      background: transparent; 
+      background: transparent;
     }
 
     &::before,
@@ -164,15 +163,12 @@ main {
   }
   @include mq(sm) {
     top: 60px;
-  } 
-  
+  }
 }
 .header-nav-item {
-  
   & + & {
     @include mq(md) {
-          margin-left: 46px; //itemの次のitemから
-
+      margin-left: 46px; //itemの次のitemから
     }
   }
 }
@@ -206,39 +202,42 @@ main {
 ===================================================== */
 .top {
   position: relative;
-}
-.top-picture {
-  @include mq(sm) {
-    padding-top: 120%; //(高さ414px / 幅345px * 100%)
-    background: url(/img/top-sp@2x.png) no-repeat center center/cover;
-  }
-  @include mq(md) {
-    padding-top: (660px / 1200px * 100%);
-    background: url(/img/top.png) top right/ 82.5% no-repeat; //(画像の横幅990px / インナー幅1200px)
-  }
-}
-.top-message {
-  @include mq(md) {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    background: #fff;
-    padding: 82px 40px 82px 40px;
-  }
-}
-.top-message-title {
-  font-size: 24px;
-  font-weight: bold;
 
-  @include mq(sm) {
-    margin-top: 36px;
+  &__picture {
+    @include mq(sm) {
+      padding-top: 120%; //(高さ414px / 幅345px * 100%)
+      background: url(/img/top-sp@2x.png) no-repeat center center/cover;
+    }
+    @include mq(md) {
+      padding-top: (660px / 1200px * 100%);
+      background: url(/img/top.png) top right/ 82.5% no-repeat; //(画像の横幅990px / インナー幅1200px)
+    }
   }
-}
-.top-message-text {
-  margin-top: 18px;
-  @include mq(sm) {
-    margin-top: 28px;
+  &__message {
+    @include mq(md) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: #fff;
+      padding: 82px 40px 82px 40px;
+    }
+  }
+
+  &__message-title {
+    font-size: 24px;
+    font-weight: bold;
+
+    @include mq(sm) {
+      margin-top: 36px;
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+    @include mq(sm) {
+      margin-top: 28px;
+    }
   }
 }
 /*=====================================================
@@ -251,39 +250,43 @@ main {
     display: flex;
     align-items: center;
   }
-}
 
-.concept-picture {
-  @include mq(md) {
-    flex: 0 0 50%; //50%以上にはならない
+  &__picture {
+    @include mq(md) {
+      flex: 0 0 50%; //50%以上にはならない
+    }
   }
-}
-.concept-message {
-  @include mq(md) {
-    margin-left: (80px / 1200px * 100%); //可変的にする
-    flex: 0 1 50%; //50%の幅が余っていなかったら縮小する
-  }
-}
-.concept-message-title {
-  font-size: 20px;
-  font-weight: bold;
 
-  @include mq(sm) {
+  &__message {
+    @include mq(md) {
+      margin-left: (80px / 1200px * 100%); //可変的にする
+      flex: 0 1 50%; //50%の幅が余っていなかったら縮小する
+    }
+  }
+
+  &__message-title {
+    font-size: 20px;
+    font-weight: bold;
+
+    @include mq(sm) {
+      margin-top: 36px;
+    }
+  }
+
+  &__message-text {
     margin-top: 36px;
+    @include mq(sm) {
+      margin-top: 28px;
+    }
   }
 }
-.concept-message-text {
-  margin-top: 36px;
-  @include mq(sm) {
-    margin-top: 28px;
-  }
-}
+
 /*=====================================================
 # feature
 ===================================================== */
 .feature {
   @include mq(sm) {
-      max-width: 340px;
+    max-width: 340px;
   }
 }
 .feature-item-list {
@@ -305,18 +308,21 @@ main {
       margin-top: 45px;
     }
   }
+
+  &__link {
+    display: block;
+    color: $font-color;
+    background: #ffffff;
+    box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
+  }
+
+  &__content {
+    font-weight: 600;
+    padding: 30px 15px;
+    text-align: center;
+  }
 }
-.feature-item-link {
-  display: block;
-  color: $font-color;
-  background: #ffffff;
-  box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
-}
-.feature-item-body {
-  font-weight: 600;
-  padding: 30px 15px;
-  text-align: center;
-}
+
 /*=====================================================
 # about
 ===================================================== */
@@ -346,20 +352,21 @@ main {
 }
 .about-inner {
   position: relative;
-}
-.about-title {
-  font-size: 22px;
-  font-weight: bold;
-  @include mq(sm) {
-    font-size: 20px;
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    @include mq(sm) {
+      font-size: 20px;
+    }
   }
-}
-.about-text {
-  margin-top: 36px;
-  @include mq(sm) {
-    margin-top: 28px;
-    font-size: 14px;
-    line-height: (24/14);
+
+  &__text {
+    margin-top: 36px;
+    @include mq(sm) {
+      margin-top: 28px;
+      font-size: 14px;
+      line-height: (24/14);
+    }
   }
 }
 /*=====================================================
@@ -392,22 +399,21 @@ main {
       margin-top: 48px;
     }
   }
-}
-.product-item-link {
-  display: block;
-  color: $font-color;
-  font-size: 14px;
-}
-.product-picture {
-}
-.product-body {
-  margin-top: 24px;
-}
-.product-title {
-}
-.product-price {
-  color: #989898;
-  margin-top: 12px;
+
+  &__link {
+    display: block;
+    color: $font-color;
+    font-size: 14px;
+  }
+
+  &__content {
+    margin-top: 24px;
+  }
+
+  &__content-price {
+    color: #989898;
+    margin-top: 12px;
+  }
 }
 .product-footer {
   text-align: center;
@@ -800,7 +806,3 @@ main {
   padding-top: 60px;
   margin-top: 80px;
 }
-
-
-
-
