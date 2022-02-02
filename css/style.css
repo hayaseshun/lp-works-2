@@ -219,21 +219,21 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .top-picture {
+  .top__picture {
     padding-top: 120%;
     background: url(/img/top-sp@2x.png) no-repeat center center/cover;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .top-picture {
+  .top__picture {
     padding-top: 55%;
     background: url(/img/top.png) top right/82.5% no-repeat;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .top-message {
+  .top__message {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -243,23 +243,23 @@ main {
   }
 }
 
-.top-message-title {
+.top__message-title {
   font-size: 24px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  .top-message-title {
+  .top__message-title {
     margin-top: 36px;
   }
 }
 
-.top-message-text {
+.top__text {
   margin-top: 18px;
 }
 
 @media screen and (max-width: 767px) {
-  .top-message-text {
+  .top__text {
     margin-top: 28px;
   }
 }
@@ -279,35 +279,35 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .concept-picture {
+  .concept-inner__picture {
     flex: 0 0 50%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .concept-message {
+  .concept-inner__message {
     margin-left: 6.66667%;
     flex: 0 1 50%;
   }
 }
 
-.concept-message-title {
+.concept-inner__message-title {
   font-size: 20px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  .concept-message-title {
+  .concept-inner__message-title {
     margin-top: 36px;
   }
 }
 
-.concept-message-text {
+.concept-inner__message-text {
   margin-top: 36px;
 }
 
 @media screen and (max-width: 767px) {
-  .concept-message-text {
+  .concept-inner__message-text {
     margin-top: 28px;
   }
 }
@@ -350,14 +350,14 @@ main {
   }
 }
 
-.feature-item-link {
+.feature-item__link {
   display: block;
   color: #333333;
   background: #ffffff;
   box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
 }
 
-.feature-item-body {
+.feature-item__content {
   font-weight: 600;
   padding: 30px 15px;
   text-align: center;
@@ -400,23 +400,23 @@ main {
   position: relative;
 }
 
-.about-title {
+.about-inner__title {
   font-size: 22px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  .about-title {
+  .about-inner__title {
     font-size: 20px;
   }
 }
 
-.about-text {
+.about-inner__text {
   margin-top: 36px;
 }
 
 @media screen and (max-width: 767px) {
-  .about-text {
+  .about-inner__text {
     margin-top: 28px;
     font-size: 14px;
     line-height: 1.71429;
@@ -466,17 +466,17 @@ main {
   }
 }
 
-.product-item-link {
+.product-item__link {
   display: block;
   color: #333333;
   font-size: 14px;
 }
 
-.product-body {
+.product-item__content {
   margin-top: 24px;
 }
 
-.product-price {
+.product-item__content-price {
   color: #989898;
   margin-top: 12px;
 }
@@ -507,7 +507,7 @@ main {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.news-item-link {
+.news-item__link {
   padding: 22px 0;
   font-size: 14px;
   color: #333333;
@@ -515,43 +515,43 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .news-item-link {
+  .news-item__link {
     display: flex;
     align-items: center;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .news-item-header {
+  .news-item__head {
     flex: 0 0 260px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .news-item-body {
+  .news-item__content {
     flex: 0 1 100%;
     margin-left: 40px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .news-item-body {
+  .news-item__content {
     margin-top: 24px;
   }
 }
 
-.news-date {
+.news-item__content-date {
   font-size: 14px;
 }
 
-.news-item-title {
+.news-item__content-title {
   margin-top: 10px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1.77778;
 }
 
-.news-item-text {
+.news-item__content-text {
   font-size: 14px;
   margin-top: 15px;
   color: #888888;
@@ -579,41 +579,41 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .concept-2-picture {
+  .concept-2-inner__picture {
     flex: 0 0 50%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .concept-2-message {
+  .concept-2-inner__message {
     margin-right: 6.66667%;
     flex: 0 1 50%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .concept-2-message {
+  .concept-2-inner__message {
     margin-top: 40px;
   }
 }
 
-.concept-2-message-title {
+.concept-2-inner__message-title {
   font-size: 28px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-  .concept-2-message-title {
+  .concept-2-inner__message-title {
     font-size: 20px;
   }
 }
 
-.concept-2-message-text {
+.concept-2-inner__message-text {
   margin-top: 36px;
 }
 
 @media screen and (max-width: 767px) {
-  .concept-2-message-text {
+  .concept-2-inner__message-text {
     font-size: 14px;
   }
 }

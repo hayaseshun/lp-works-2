@@ -434,50 +434,51 @@ main {
 }
 .news-item {
   border-bottom: 1px solid #e0e0e0;
-}
-.news-item-link {
-  padding: 22px 0;
-  font-size: 14px;
-  color: $font-color;
-  display: block;
 
-  @include mq(md) {
-    display: flex;
-    align-items: center;
+  &__link {
+    padding: 22px 0;
+    font-size: 14px;
+    color: $font-color;
+    display: block;
+
+    @include mq(md) {
+      display: flex;
+      align-items: center;
+    }
   }
-}
-.news-item-header {
-  @include mq(md) {
-    flex: 0 0 260px;
+
+  &__head {
+    @include mq(md) {
+      flex: 0 0 260px;
+    }
   }
-}
-.news-item-picture {
-  img {
+
+  &__content {
+    @include mq(md) {
+      flex: 0 1 100%;
+      margin-left: 40px;
+    }
+    @include mq(sm) {
+      margin-top: 24px;
+    }
   }
-}
-.news-item-body {
-  @include mq(md) {
-    flex: 0 1 100%;
-    margin-left: 40px;
+
+  &__content-date {
+    font-size: 14px;
   }
-  @include mq(sm) {
-    margin-top: 24px;
+
+  &__content-title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: (32 / 18);
   }
-}
-.news-date {
-  font-size: 14px;
-}
-.news-item-title {
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: (32 / 18);
-}
-.news-item-text {
-  font-size: 14px;
-  margin-top: 15px;
-  color: #888888;
-  line-height: (24/14);
+  &__content-text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #888888;
+    line-height: (24/14);
+  }
 }
 .news-footer {
   text-align: center;
@@ -493,33 +494,36 @@ main {
     flex-direction: row-reverse; //要素を逆にする
   }
   margin-top: 64px;
-}
 
-.concept-2-picture {
-  @include mq(md) {
-    flex: 0 0 50%; //50%以上にはならない
+  &__picture {
+    @include mq(md) {
+      flex: 0 0 50%; //50%以上にはならない
+    }
   }
-}
-.concept-2-message {
-  @include mq(md) {
-    margin-right: (80px / 1200px * 100%); //可変的にする
-    flex: 0 1 50%; //50%の幅が余っていなかったら縮小する
+
+  &__message {
+    @include mq(md) {
+      margin-right: (80px / 1200px * 100%); //可変的にする
+      flex: 0 1 50%; //50%の幅が余っていなかったら縮小する
+    }
+    @include mq(sm) {
+      margin-top: 40px;
+    }
   }
-  @include mq(sm) {
-    margin-top: 40px;
+
+  &__message-title {
+    font-size: 28px;
+    font-weight: bold;
+    @include mq(sm) {
+      font-size: 20px;
+    }
   }
-}
-.concept-2-message-title {
-  font-size: 28px;
-  font-weight: bold;
-  @include mq(sm) {
-    font-size: 20px;
-  }
-}
-.concept-2-message-text {
-  margin-top: 36px;
-  @include mq(sm) {
-    font-size: 14px;
+
+  &__message-text {
+    margin-top: 36px;
+    @include mq(sm) {
+      font-size: 14px;
+    }
   }
 }
 
