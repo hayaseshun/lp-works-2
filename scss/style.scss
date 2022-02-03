@@ -577,67 +577,68 @@ main {
   text-align: center;
   letter-spacing: 0.1em;
 }
-.contact-text-inline {
-  font-size: 16px;
-  color: #e7728e;
-}
-.contact-item {
+.contact-text- .contact-item {
   @include mq(md) {
     display: flex;
   }
   & + & {
     margin-top: 32px;
   }
-}
-.contact-item-title {
-  @include mq(md) {
-    flex: 0 1 100%; //余っている部分を使う
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      border-style: solid;
-      border-width: 20px 0 20px 8px;
-      border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
-      top: 0;
-      right: -8px;
+
+  &__inline {
+    font-size: 12px;
+    color: rgba(231, 114, 142, 1);
+    vertical-align: super;
+    line-height: 1;
+    @include mq(sm) {
+      font-size: 10px;
     }
   }
-  background: rgba(62, 161, 209, 0.7);
-  color: #ffff;
-  font-size: 18px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  padding-left: 10px;
-  position: relative;
 
-  @include mq(sm) {
-    display: inline-block;
-    height: 32px;
-    line-height: 32px;
-    font-size: 14px;
-    padding: 0 16px;
+  &__title {
+    @include mq(md) {
+      flex: 0 1 100%; //余っている部分を使う
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 0 20px 8px;
+        border-color: transparent transparent transparent
+          rgba(62, 161, 209, 0.7);
+        top: 0;
+        right: -8px;
+      }
+    }
+    background: rgba(62, 161, 209, 0.7);
+    color: #ffff;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding-left: 10px;
+    position: relative;
+
+    @include mq(sm) {
+      display: inline-block;
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      padding: 0 16px;
+    }
+  }
+
+  &__input {
+    @include mq(sm) {
+      margin-top: 3px;
+    }
+    @include mq(md) {
+      flex: 0 0 320px;
+      margin-left: 18px;
+    }
   }
 }
-.contact-item-inline {
-  font-size: 12px;
-  color: rgba(231, 114, 142, 1);
-  vertical-align: super;
-  line-height: 1;
-  @include mq(sm) {
-    font-size: 10px;
-  }
-}
-.contact-item-input {
-  @include mq(sm) {
-    margin-top: 3px;
-  }
-  @include mq(md) {
-    flex: 0 0 320px;
-    margin-left: 18px;
-  }
-}
+
 .contact-radio-wrap {
   display: inline-flex;
   border: solid 1px #fff;

@@ -681,22 +681,30 @@ main {
   letter-spacing: 0.1em;
 }
 
-.contact-text-inline {
-  font-size: 16px;
-  color: #e7728e;
-}
-
 @media screen and (min-width: 768px) {
-  .contact-item {
+  .contact-text- .contact-item {
     display: flex;
   }
 }
 
-.contact-item + .contact-item {
+.contact-text- .contact-item + .contact-text- .contact-item {
   margin-top: 32px;
 }
 
-.contact-item-title {
+.contact-text- .contact-item__inline {
+  font-size: 12px;
+  color: #e7728e;
+  vertical-align: super;
+  line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-text- .contact-item__inline {
+    font-size: 10px;
+  }
+}
+
+.contact-text- .contact-item__title {
   background: rgba(62, 161, 209, 0.7);
   color: #ffff;
   font-size: 18px;
@@ -708,10 +716,10 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .contact-item-title {
+  .contact-text- .contact-item__title {
     flex: 0 1 100%;
   }
-  .contact-item-title::after {
+  .contact-text- .contact-item__title::after {
     content: "";
     display: block;
     position: absolute;
@@ -724,7 +732,7 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  .contact-item-title {
+  .contact-text- .contact-item__title {
     display: inline-block;
     height: 32px;
     line-height: 32px;
@@ -733,27 +741,14 @@ main {
   }
 }
 
-.contact-item-inline {
-  font-size: 12px;
-  color: #e7728e;
-  vertical-align: super;
-  line-height: 1;
-}
-
 @media screen and (max-width: 767px) {
-  .contact-item-inline {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .contact-item-input {
+  .contact-text- .contact-item__input {
     margin-top: 3px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .contact-item-input {
+  .contact-text- .contact-item__input {
     flex: 0 0 320px;
     margin-left: 18px;
   }
