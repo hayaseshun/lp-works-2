@@ -1,0 +1,90 @@
+@use "../foundation";
+
+/*=====================================================
+# header
+===================================================== */
+.header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .drawer-hamburger {
+    .drawer--right & {
+      right: 3px;
+    }
+  }
+
+  .drawer-hamburger-icon {
+    background: foundation.$primary-color;
+
+    .drawer-open & {
+      background: transparent;
+    }
+
+    &::before,
+    &::after {
+      background: foundation.$primary-color;
+    }
+  }
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  @include foundation.mq(sm) {
+    height: 60px;
+  }
+}
+.header-nav {
+  margin-left: auto;
+  @include foundation.mq(sm) {
+    top: 60px;
+    background: foundation.$primary-color;
+    padding: 24px;
+  }
+}
+.header-logo {
+  width: 120px;
+}
+.header-nav-list {
+  @include foundation.mq(md) {
+    display: flex;
+  }
+  @include foundation.mq(sm) {
+    top: 60px;
+  }
+}
+.header-nav-item {
+  & + & {
+    @include foundation.mq(md) {
+      margin-left: 46px; //itemの次のitemから
+    }
+  }
+}
+.header-nav-item-link {
+  display: block; //リンク要素の場合は基本的にdisplay: block;を指定
+  color: foundation.$font-color;
+  height: 70px; //クリック領域を広げるため
+  line-height: 70px;
+  letter-spacing: 0.1em;
+
+  @include foundation.mq(sm) {
+    color: #fff;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  @include foundation.mq(md) {
+    transition: color 0.4s;
+
+    &:hover {
+      color: foundation.$primary-color;
+    }
+  }
+}
+

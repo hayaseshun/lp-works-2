@@ -1,0 +1,79 @@
+@use "../foundation";
+
+/*=====================================================
+# footer
+===================================================== */
+.footer {
+  background: #f7f7f7;
+  padding: 42px 40px 12px;
+  @include foundation.mq(sm) {
+    padding: 36px 0 12px;
+  }
+}
+.footer-logo {
+  width: 120px;
+  margin: 0 auto;
+}
+.footer-nav-list {
+  @include foundation.mq(md) {
+    display: flex;
+    justify-content: center;
+  }
+  @include foundation.mq(sm) {
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+.footer-nav-item {
+  margin-top: 8px;
+
+  @include foundation.mq(md) {
+    & + & {
+      margin-left: 32px;
+    }
+  }
+}
+.footer-nav-link {
+  font-size: 12px;
+  color: foundation.$font-color;
+  display: block;
+  padding: 1em 0;
+  @include foundation.mq(sm) {
+    padding: 0.3em 0;
+  }
+}
+
+.footer-sns-list {
+  text-align: center;
+  @include foundation.mq(sm) {
+    margin-top: 10px;
+  }
+}
+.footer-sns-item {
+  display: inline-block;
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+.footer-sns-link {
+  color: foundation.$primary-color;
+  font-size: 24px;
+  display: block;
+  padding: 0.1em 0.5em;
+}
+.footer-copyright {
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+
+  @include foundation.mq(sm) {
+    margin-top: 16px;
+  }
+}
+
+.footer-inner {
+  padding-top: 60px;
+  margin-top: 80px;
+}
