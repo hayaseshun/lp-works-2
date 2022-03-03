@@ -294,7 +294,7 @@ main {
 @media screen and (max-width: 767px) {
   .top__picture {
     padding-top: 120%;
-    background: url(/img/top-sp@2x.png) no-repeat center center/cover;
+    background: url(/img/top-sp.png) no-repeat center center/cover;
   }
 }
 @media screen and (min-width: 768px) {
@@ -438,12 +438,12 @@ main {
 }
 @media screen and (min-width: 768px) {
   .about {
-    background: url(/img/bg@2x.png) no-repeat center center/cover;
+    background: url(/img/bg.png) no-repeat center center/cover;
   }
 }
 @media screen and (max-width: 767px) {
   .about {
-    background: url(/img/bg-sp@2x.png) no-repeat center center/cover;
+    background: url(/img/bg-sp.png) no-repeat center center/cover;
     padding: 175px 0 52px;
   }
 }
@@ -646,7 +646,7 @@ main {
 # contact
 ===================================================== */
 .contact {
-  background: url(/img/contact@2x.png) no-repeat center center/cover;
+  background: url(/img/contact.png) no-repeat center center/cover;
   padding: 72px 40px 80px;
   margin-top: 225px;
 }

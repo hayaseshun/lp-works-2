@@ -18,7 +18,7 @@ main {
   &__picture {
     @include foundation.mq(sm) {
       padding-top: 120%; //(高さ414px / 幅345px * 100%)
-      background: url(/img/top-sp@2x.png) no-repeat center center/cover;
+      background: url(/img/top-sp.png) no-repeat center center/cover;
     }
     @include foundation.mq(md) {
       padding-top: (660px / 1200px * 100%);
@@ -155,10 +155,10 @@ main {
     background: rgba(0, 0, 0, 0.12);
   }
   @include foundation.mq(md) {
-    background: url(/img/bg@2x.png) no-repeat center center/cover;
+    background: url(/img/bg.png) no-repeat center center/cover;
   }
   @include foundation.mq(sm) {
-    background: url(/img/bg-sp@2x.png) no-repeat center center/cover;
+    background: url(/img/bg-sp.png) no-repeat center center/cover;
     padding: 175px 0 52px;
   }
 }
@@ -343,7 +343,7 @@ main {
 # contact
 ===================================================== */
 .contact {
-  background: url(/img/contact@2x.png) no-repeat center center/cover;
+  background: url(/img/contact.png) no-repeat center center/cover;
   padding: 72px 40px 80px;
   margin-top: 225px;
 
