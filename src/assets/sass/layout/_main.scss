@@ -1,0 +1,547 @@
+@use "../foundation";
+/*=====================================================
+# main
+===================================================== */
+main {
+  padding-top: 70px; //headerの高さを指定してしまっため、mainの上部が隠れてしまうため
+  @include foundation.mq(sm) {
+    padding-top: 60px;
+  }
+}
+/*=====================================================
+# top
+===================================================== */
+.top {
+  position: relative;
+
+  &__picture {
+    @include foundation.mq(sm) {
+      padding-top: 120%; //(高さ414px / 幅345px * 100%)
+      background: url(../img/top-sp.png) no-repeat center center/cover;
+    }
+    @include foundation.mq(md) {
+      padding-top: (660px / 1200px * 100%);
+      background: url(../img/top.png) top right/ 82.5% no-repeat; //(画像の横幅990px / インナー幅1200px)
+    }
+  }
+  &__message {
+    @include foundation.mq(md) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: #fff;
+      padding: 82px 40px 82px 40px;
+    }
+  }
+
+  &__message-title {
+    font-size: 24px;
+    font-weight: bold;
+
+    @include foundation.mq(sm) {
+      margin-top: 36px;
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+    @include foundation.mq(sm) {
+      margin-top: 28px;
+    }
+  }
+}
+/*=====================================================
+# concept
+===================================================== */
+.concept-inner {
+  margin-top: 64px;
+
+  @include foundation.mq(md) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__picture {
+    @include foundation.mq(md) {
+      flex: 0 0 50%; //50%以上にはならない
+    }
+  }
+
+  &__message {
+    @include foundation.mq(md) {
+      margin-left: (80px / 1200px * 100%); //可変的にする
+      flex: 0 1 50%; //50%の幅が余っていなかったら縮小する
+    }
+  }
+
+  &__message-title {
+    font-size: 20px;
+    font-weight: bold;
+
+    @include foundation.mq(sm) {
+      margin-top: 36px;
+    }
+  }
+
+  &__message-text {
+    margin-top: 36px;
+    @include foundation.mq(sm) {
+      margin-top: 28px;
+    }
+  }
+}
+
+/*=====================================================
+# feature
+===================================================== */
+.feature {
+  @include foundation.mq(sm) {
+    max-width: 340px;
+  }
+}
+.feature-item-list {
+  margin-top: 64px;
+  @include foundation.mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include foundation.mq(sm) {
+    margin-top: 45px;
+  }
+}
+.feature-item {
+  @include foundation.mq(md) {
+    flex: 0 0 (340px / 1200px * 100%); //(itemの横幅340px / 1200px (インナー幅))
+  }
+  @include foundation.mq(sm) {
+    & + & {
+      margin-top: 45px;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: foundation.$font-color;
+    background: #ffffff;
+    box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
+  }
+
+  &__content {
+    font-weight: 600;
+    padding: 30px 15px;
+    text-align: center;
+  }
+}
+
+/*=====================================================
+# about
+===================================================== */
+.about {
+  color: #fff;
+  position: relative;
+  padding: 120px 0;
+
+  &::before {
+    //上から黒い要素をかぶせる
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.12);
+  }
+  @include foundation.mq(md) {
+    background: url(../img/bg.png) no-repeat center center/cover;
+  }
+  @include foundation.mq(sm) {
+    background: url(../img/bg-sp.png) no-repeat center center/cover;
+    padding: 175px 0 52px;
+  }
+}
+.about-inner {
+  position: relative;
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    @include foundation.mq(sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    margin-top: 36px;
+    @include foundation.mq(sm) {
+      margin-top: 28px;
+      font-size: 14px;
+      line-height: (24/14);
+    }
+  }
+}
+/*=====================================================
+# product
+===================================================== */
+.product {
+  max-width: 940px;
+  @include foundation.mq(sm) {
+    max-width: 340px;
+    padding: 50px;
+  }
+}
+.product-item-list {
+  margin-top: 64px;
+  @include foundation.mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include foundation.mq(sm) {
+    margin-top: 44px;
+  }
+}
+
+.product-item {
+  @include foundation.mq(md) {
+    flex: 0 0 (260px / 940px * 100%);
+  }
+  @include foundation.mq(sm) {
+    & + & {
+      margin-top: 48px;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: foundation.$font-color;
+    font-size: 14px;
+  }
+
+  &__content {
+    margin-top: 24px;
+  }
+
+  &__content-price {
+    color: #989898;
+    margin-top: 12px;
+  }
+}
+.product-footer {
+  text-align: center;
+  margin-top: 44px;
+}
+
+/*=====================================================
+# news
+===================================================== */
+.news {
+  max-width: 1040px;
+  @include foundation.mq(sm) {
+    padding: 0 32px;
+  }
+}
+.news-list {
+  margin-top: 44px;
+}
+.news-item {
+  border-bottom: 1px solid #e0e0e0;
+
+  &__link {
+    padding: 22px 0;
+    font-size: 14px;
+    color: foundation.$font-color;
+    display: block;
+
+    @include foundation.mq(md) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__head {
+    @include foundation.mq(md) {
+      flex: 0 0 260px;
+    }
+  }
+
+  &__content {
+    @include foundation.mq(md) {
+      flex: 0 1 100%;
+      margin-left: 40px;
+    }
+    @include foundation.mq(sm) {
+      margin-top: 24px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: (32 / 18);
+  }
+  &__text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #888888;
+    line-height: (24/14);
+  }
+}
+.news-footer {
+  text-align: center;
+  margin-top: 44px;
+}
+/*=====================================================
+# concept-2
+===================================================== */
+.concept-2-inner {
+  @include foundation.mq(md) {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; //要素を逆にする
+  }
+  margin-top: 64px;
+
+  &__picture {
+    @include foundation.mq(md) {
+      flex: 0 0 50%; //50%以上にはならない
+    }
+  }
+
+  &__message {
+    @include foundation.mq(md) {
+      margin-right: (80px / 1200px * 100%); //可変的にする
+      flex: 0 1 50%; //50%の幅が余っていなかったら縮小する
+    }
+    @include foundation.mq(sm) {
+      margin-top: 40px;
+    }
+  }
+
+  &__message-title {
+    font-size: 28px;
+    font-weight: bold;
+    @include foundation.mq(sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__message-text {
+    margin-top: 36px;
+    @include foundation.mq(sm) {
+      font-size: 14px;
+    }
+  }
+}
+
+/*=====================================================
+# contact
+===================================================== */
+.contact {
+  background: url(../img/contact.png) no-repeat center center/cover;
+  padding: 72px 40px 80px;
+  margin-top: 225px;
+
+  .util-title {
+    color: #3ea1d1;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    padding: 0.2em 0.5em;
+    border-radius: 2px;
+    box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+  }
+  input[type="text"],
+  input[type="email"] {
+    height: 40px;
+  }
+  textarea {
+    min-height: 112px;
+    resize: vertical;
+  }
+  @include foundation.mq(sm) {
+    margin-top: 96px;
+    padding: 57px 28px;
+  }
+}
+.contact-form {
+  margin-top: 60px;
+  @include foundation.mq(sm) {
+    margin-top: 30px;
+  }
+}
+.contact-list {
+  max-width: 510px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.contact-text {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.contact-text- .contact-item {
+  @include foundation.mq(md) {
+    display: flex;
+  }
+  & + & {
+    margin-top: 32px;
+  }
+
+  &__inline {
+    font-size: 12px;
+    color: rgba(231, 114, 142, 1);
+    vertical-align: super;
+    line-height: 1;
+    @include foundation.mq(sm) {
+      font-size: 10px;
+    }
+  }
+
+  &__title {
+    @include foundation.mq(md) {
+      flex: 0 1 100%; //余っている部分を使う
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-style: solid;
+        border-width: 20px 0 20px 8px;
+        border-color: transparent transparent transparent
+          rgba(62, 161, 209, 0.7);
+        top: 0;
+        right: -8px;
+      }
+    }
+    background: rgba(62, 161, 209, 0.7);
+    color: #ffff;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding-left: 10px;
+    position: relative;
+
+    @include foundation.mq(sm) {
+      display: inline-block;
+      height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      padding: 0 16px;
+    }
+  }
+
+  &__input {
+    @include foundation.mq(sm) {
+      margin-top: 3px;
+    }
+    @include foundation.mq(md) {
+      flex: 0 0 320px;
+      margin-left: 18px;
+    }
+  }
+}
+
+.contact-radio-wrap {
+  display: inline-flex;
+  border: solid 1px #fff;
+  border-radius: 1px;
+  box-shadow: 5px 6px 15px rgba(96, 96, 96, 0.16);
+}
+.contact-radio {
+  position: relative;
+}
+.contact-radio-part {
+  display: block;
+  background: #fff;
+  color: foundation.$primary-color;
+  height: 38px;
+  line-height: 38px;
+  width: 80px;
+  text-align: center;
+}
+.contact-radio-input {
+  position: absolute; //display-noneだとタブでフォーカスが効かなくなる
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  &:checked + .contact-radio-part {
+    background: foundation.$primary-color;
+    color: #fff;
+    border-radius: 1px;
+  }
+  &:focus + .contact-radio-part {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+.contact-privacy {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.contact-privacy-part {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid foundation.$primary-color;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact-privacy-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  &:checked + .contact-privacy-part {
+    width: 10px;
+    border-top: 0;
+    border-left: 0;
+    background: transparent;
+    transform: rotate(45deg);
+    top: -5px;
+    left: 5px;
+  }
+  &:focus + .contact-privacy-part {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+  &:checked:focus + .contact-privacy-part {
+    outline: none;
+  }
+}
+.contact-footer {
+  text-align: center;
+  margin-top: 20px;
+  @include foundation.mq(sm) {
+    margin-top: 29px;
+  }
+}
+.contact-privacy-link {
+  color: foundation.$primary-color;
+  text-decoration: underline;
+}
+.contact-footer-submit {
+  margin-top: 40px;
+}
+.contact-message {
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+
+  &.-error {
+    color: #f00;
+  }
+}
